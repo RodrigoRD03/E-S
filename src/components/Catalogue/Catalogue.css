@@ -1,0 +1,154 @@
+.app__Catalogue {
+  width: 100%;
+  height: 620px;
+  padding: 20px;
+  position: relative;
+}
+
+.app__Catalogue-Top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app__Catalogue-Title {
+  font-size: 1.3em;
+  font-family: var(--text-Carrete);
+}
+
+.app__Catalogue-Title h1 {
+  position: relative;
+  width: max-content;
+
+  font-size: 2.3em;
+  font-family: var(--text-Carrete);
+  color: var(--text-100);
+  z-index: 1;
+}
+
+.app__Catalogue-Title h1:first-child:after {
+  position: absolute;
+  content: "Our Best";
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  color: var(--primary-100);
+  animation: movingTitle 2.5s infinite ease-in-out;
+}
+
+.app__Catalogue-Title h1:last-child:after {
+  position: absolute;
+  content: "Products";
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  color: var(--primary-100);
+  animation: movingTitle 2.5s infinite ease-in-out;
+}
+
+.app__Catalogue-Logos {
+  position: absolute;
+  height: 60px;
+  width: 600px;
+  right: 0;
+  padding-left: 20px;
+
+  background-color: rgba(30, 30, 30, 0.75);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.imgs-logos {
+  height: 50px;
+}
+.app__Catalogue-Carrousel {
+  margin-top: 100px;
+  padding: 0px 200px;
+}
+
+.carrousel__container {
+  width: 240px;
+  height: 250px;
+  position: relative;
+  padding: 20px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  z-index: 1;
+}
+
+.carrousel__container::after {
+  position: absolute;
+  content: "";
+  display: flex;
+
+  width: 100.64px;
+  height: 200px;
+  top: 0;
+  left: 67px;
+
+  margin: auto;
+
+  border-radius: 50vh;
+
+  z-index: -1;
+
+  transition: 0.3s;
+}
+
+.carrousel__container:nth-child(odd)::after {
+  background-color: var(--primary-200);
+}
+.carrousel__container:nth-child(even)::after {
+  background-color: var(--primary-200);
+}
+
+.imgs-Tenis {
+  margin: none;
+  width: 200px;
+  height: 150px;
+}
+
+.Tenis__name {
+  margin-top: 20px;
+  display: none;
+
+  font-family: var(--text-Aldrich);
+  color: var(--text-100);
+}
+
+.carrousel__container:hover .Tenis__name {
+  display: flex;
+}
+
+.carrousel__container:hover::after {
+  width: 240px;
+  height: 100%;
+  left: 0;
+
+  background-color: rgba(189, 111, 241, 0.75);
+
+  border-radius: 15px;
+}
+
+
+@keyframes movingTitle {
+  0% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(-4px);
+  }
+}
