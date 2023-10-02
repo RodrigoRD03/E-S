@@ -5,6 +5,7 @@ import About from './About/About'
 import Gallery from './Gallery/Gallery'
 import Contact from './Contact/Contact'
 import LineBuy from './LineBuy/LineBuy'
+import LineCaution from './LineCaution/LineCaution'
 
 export {
     Navbar,
@@ -13,5 +14,6 @@ export {
     About,
     Gallery,
     Contact,
-    LineBuy
+    LineBuy,
+    LineCaution
 }

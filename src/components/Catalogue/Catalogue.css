@@ -67,9 +67,11 @@
 .imgs-logos {
   height: 50px;
 }
+
 .app__Catalogue-Carrousel {
   margin-top: 100px;
   padding: 0px 200px;
+  cursor: hand;
 }
 
 .carrousel__container {
@@ -78,10 +80,6 @@
   position: relative;
   padding: 20px;
   display: flex;
-
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
 
   z-index: 1;
 }
@@ -105,11 +103,12 @@
   transition: 0.3s;
 }
 
-.carrousel__container:nth-child(odd)::after {
+.carrousel__container::after {
   background-color: var(--primary-200);
 }
-.carrousel__container:nth-child(even)::after {
-  background-color: var(--primary-200);
+
+.strong-color::after {
+  background-color: var(--primary-100);
 }
 
 .imgs-Tenis {
@@ -118,15 +117,41 @@
   height: 150px;
 }
 
-.Tenis__name {
-  margin-top: 20px;
+.carrousel__Tenis {
+  width: 200px;
   display: none;
+
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.carrousel__Tenis-Info {
+  margin-top: 20px;
+  flex-direction: column;
+  gap: 5px;
 
   font-family: var(--text-Aldrich);
   color: var(--text-100);
 }
 
-.carrousel__container:hover .Tenis__name {
+.Tenis__mood {
+  font-size: .8em;
+}
+
+.carrousel__Tenis-Color {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.Tenis-color {
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50vh;
+}
+
+.carrousel__container:hover .carrousel__Tenis {
   display: flex;
 }
 
@@ -135,11 +160,26 @@
   height: 100%;
   left: 0;
 
-  background-color: rgba(189, 111, 241, 0.75);
+  background-color: rgba(189, 111, 241, 0.95);
 
   border-radius: 15px;
 }
 
+.strong-color:hover::after {
+  width: 240px;
+  height: 100%;
+  left: 0;
+
+  background-color: rgba(138, 44, 220, 0.95);
+
+  border-radius: 15px;
+}
+
+
+
+.slick-prev:before {
+  margin-right: 10px;
+}
 
 @keyframes movingTitle {
   0% {

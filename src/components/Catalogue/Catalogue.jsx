@@ -1,9 +1,10 @@
 import React from "react";
 import "./Catalogue.css";
 import image from "../../constants/image";
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import Sneakers from "../../constants/Sneakers";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Catalogue = () => {
   const settings = {
@@ -11,7 +12,7 @@ const Catalogue = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
       {
@@ -30,9 +31,9 @@ const Catalogue = () => {
       },
     ],
   };
-  
+
   return (
-    <div className="app__Catalogue section-background">
+    <section className="app__Catalogue section-background">
       <div className="app__Catalogue-Top">
         <div className="app__Catalogue-Title">
           <h1>Our Best</h1>
@@ -48,29 +49,34 @@ const Catalogue = () => {
       </div>
       <div className="app__Catalogue-Carrousel">
         <Slider {...settings}>
-          <div className="carrousel__container">
-            <img className="imgs-Tenis" src={image.T1} alt="Item 1" />
-            <p className="Tenis__name">Item 1</p>
-          </div>
-          <div className="carrousel__container">
-            <img className="imgs-Tenis" src={image.T2} alt="Item 2" />
-            <p className="Tenis__name">Vans - Old Skool</p>
-          </div>
-          <div className="carrousel__container">
-            <img className="imgs-Tenis" src={image.T3} alt="Item 3" />
-            <p className="Tenis__name">Item 3</p>
-          </div>
-          <div className="carrousel__container">
-            <img className="imgs-Tenis" src={image.T4} alt="Item 3" />
-            <p className="Tenis__name">Item 4</p>
-          </div>
-          <div className="carrousel__container">
-            <img className="imgs-Tenis" src={image.T5} alt="Item 3" />
-            <p className="Tenis__name">Item 5</p>
-          </div>
+          {Sneakers.Sneakers.map((item) => (
+            <div className={item.Class}>
+              <img className="imgs-Tenis" src={item.Img} alt="Item 1" />
+              <div className="carrousel__Tenis">
+                <div className="carrousel__Tenis-Info">
+                  <p className="Tenis__name">{item.Name}</p>
+                  <p className="Tenis__mood">{item.Mood}</p>
+                </div>
+                <div className="carrousel__Tenis-Color">
+                  <div
+                    style={{ backgroundColor: item.FirstColor }}
+                    className="Tenis-color"
+                  ></div>
+                  <div
+                    style={{ backgroundColor: item.SecondColor }}
+                    className="Tenis-color"
+                  ></div>
+                  <div
+                    style={{ backgroundColor: item.ThirdColor }}
+                    className="Tenis-color"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          ))}
         </Slider>
       </div>
-    </div>
+    </section>
   );
 };
 

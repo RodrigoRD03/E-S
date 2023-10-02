@@ -1,5 +1,5 @@
 .app__home {
-  width: 100%;
+  width: 70%;
   height: 560px;
   top: 60px;
   padding: 0 100px 0 100px;
@@ -9,6 +9,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin: auto;
 }
 
 .app__home-texts {
