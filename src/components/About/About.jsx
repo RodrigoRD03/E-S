@@ -1,10 +1,21 @@
 import React from "react";
+import "./About.css";
 
 const About = () => {
     return (
-        <div>
-            About
-        </div>
+        <section className="app__about">
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+        </section>
     )
 }
 

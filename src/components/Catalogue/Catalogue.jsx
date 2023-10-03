@@ -58,18 +58,18 @@ const Catalogue = () => {
                   <p className="Tenis__mood">{item.Mood}</p>
                 </div>
                 <div className="carrousel__Tenis-Color">
-                  <div
+                  <span
                     style={{ backgroundColor: item.FirstColor }}
                     className="Tenis-color"
-                  ></div>
-                  <div
+                  ></span>
+                  <span
                     style={{ backgroundColor: item.SecondColor }}
                     className="Tenis-color"
-                  ></div>
-                  <div
+                  ></span>
+                  <span
                     style={{ backgroundColor: item.ThirdColor }}
                     className="Tenis-color"
-                  ></div>
+                  ></span>
                 </div>
               </div>
             </div>
