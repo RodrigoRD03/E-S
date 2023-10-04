@@ -9,8 +9,9 @@ const App = () => {
       <Home />
       <LineBuy id="Catalogue"/>
       <Catalogue />
-      <LineCaution />
+      <LineCaution id="About"/>
       <About />
+      <LineBuy id="Gallery"/>
       <Gallery /> 
       <Contact />
     </div>
