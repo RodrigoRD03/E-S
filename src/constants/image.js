@@ -13,6 +13,10 @@ import T4 from "../Assets/img/Tenis-4.png"
 import T5 from "../Assets/img/Tenis-5.png"
 import T6 from "../Assets/img/Tenis-6.png"
 import Caution from "../Assets/img/Caution.jpg"
+import TenisL1 from "../Assets/img/Tenis-L1.jpg"
+import TenisL2 from "../Assets/img/Tenis-L2.jpg"
+import TenisC1 from "../Assets/img/Tenis-C1.jpg"
+import TenisC2 from "../Assets/img/Tenis-C2.jpeg"
 
 export default {
     Logo,
@@ -29,5 +33,9 @@ export default {
     T4,
     T5,
     T6,
-    Caution
+    Caution,
+    TenisL1,
+    TenisL2,
+    TenisC1,
+    TenisC2
 }
