@@ -38,6 +38,10 @@
 .app__gallery-group {
     margin: auto;
 
+    display: grid;
+    grid-template: 
+    "P1 P2 P12 P3 P11 P4 P8"
+    "P1 P5 P14 P10 P9 P8 P8";
     z-index: 1;
 }
 
