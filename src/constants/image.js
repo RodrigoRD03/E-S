@@ -31,6 +31,7 @@ import Photo11 from "../Assets/img/Photo11.jpg";
 import Photo12 from "../Assets/img/Photo12.jpg";
 import Photo13 from "../Assets/img/Photo13.jpg";
 import Photo14 from "../Assets/img/Photo14.jpg";
+import ImgOpinion from "../Assets/img/ImgOpinion.jpg"
 
 export default {
   Logo,
@@ -66,4 +67,5 @@ export default {
   Photo12,
   Photo13,
   Photo14,
+  ImgOpinion
 };

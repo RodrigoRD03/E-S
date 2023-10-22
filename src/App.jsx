@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Home, Catalogue, About, Gallery, Contact, LineBuy, LineCaution } from "./components";
+import { Navbar, Home, Catalogue, About, Gallery, Opinions, Contact, LineBuy, LineCaution } from "./components";
 import "./App.css"
 
 const App = () => {
@@ -13,6 +13,8 @@ const App = () => {
       <About />
       <LineBuy id="Gallery"/>
       <Gallery /> 
+      <LineCaution id="Opinion"/>
+      <Opinions />
       <Contact />
     </div>
   );

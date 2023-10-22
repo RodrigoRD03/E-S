@@ -5,6 +5,10 @@
   position: relative;
 }
 
+.app__Catalogue img{
+  border-radius: 0;
+}
+
 .app__Catalogue-Top {
   display: flex;
   justify-content: space-between;

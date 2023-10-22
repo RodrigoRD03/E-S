@@ -15,8 +15,8 @@ const Navbar = () => {
             </div>
             <div className="app__navbar-redirections">
                 <a href="#Gallery">Gallery</a>
+                <a href="#Opinion">Opinions</a>
                 <a href="#Contact">Contact</a>
-                <a href="#Shop">Shop</a>
             </div>
         </div>
     )
