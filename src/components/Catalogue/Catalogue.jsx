@@ -50,7 +50,7 @@ const Catalogue = () => {
       <div className="app__Catalogue-Carrousel">
         <Slider {...settings}>
           {Sneakers.Sneakers.map((item) => (
-            <div className={item.Class}>
+            <div className={item.Class} key={item.Name}>
               <img className="imgs-Tenis" src={item.Img} alt="Item 1" />
               <div className="carrousel__Tenis">
                 <div className="carrousel__Tenis-Info">
