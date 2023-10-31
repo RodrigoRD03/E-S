@@ -84,8 +84,15 @@
   position: relative;
   padding: 20px;
   display: flex;
-
+  justify-content: center;
+  align-items: center;
   z-index: 1;
+}
+
+.slick-slide  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carrousel__container::after {
@@ -179,10 +186,33 @@
   border-radius: 15px;
 }
 
-
-
 .slick-prev:before {
   margin-right: 10px;
+}
+
+@media screen and (max-width: 1110px) {
+  .app__Catalogue-Carrousel {
+    padding: 0px 100px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .app__Catalogue-Logos {
+    height: 400px;
+    width: 80px;
+    padding: 10px 10px;
+    top: 150px;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  .imgs-logos {
+    width: 100%;
+    height: auto;
+  }
+  .app__Catalogue-Carrousel {
+    padding: 0px 95px 0px 20px;
+  }
 }
 
 @keyframes movingTitle {

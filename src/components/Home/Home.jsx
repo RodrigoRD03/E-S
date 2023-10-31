@@ -13,6 +13,9 @@ const Home = () => {
             <h1>Style Meets</h1>
             <h1>Elegance.</h1>
           </div>
+          <div className="app__home-img_small">
+            <img src="https://images.pexels.com/photos/16626202/pexels-photo-16626202/free-photo-of-moda-hombre-rojo-mujer.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
+          </div>
           <div className="app__home-texts--scroll">
             <p>
               Scroll <br /> Down
@@ -21,7 +24,7 @@ const Home = () => {
               <lord-icon
                 src="https://cdn.lordicon.com/wtfdpwey.json"
                 trigger="loop"
-                colors="primary:#121331,secondary:#08a88a"
+                colors="primary:#121331,secondary:#892CDC"
               />
             </div>
             <p>

@@ -2,7 +2,7 @@ import React from "react";
 import "./About.css";
 import image from "../../constants/image";
 import { BsPersonCircle, BsHeart, BsPeople } from "react-icons/bs";
-import { AiOutlineSwap } from "react-icons/ai"
+import { AiOutlineSwap } from "react-icons/ai";
 import { IoFootstepsOutline } from "react-icons/io5";
 
 const About = () => {
@@ -87,9 +87,9 @@ const About = () => {
           </div>
         </div>
         <div className="app__about-right_JoinUS">
-            <span>
-                <AiOutlineSwap />
-            </span>
+          <span>
+            <AiOutlineSwap />
+          </span>
           <div>
             <h4>Join US</h4>
             <p>

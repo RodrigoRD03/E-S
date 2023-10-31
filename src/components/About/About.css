@@ -1,4 +1,5 @@
 .app__about {
+  position: relative;
   width: 100%;
   height: 620px;
 
@@ -21,6 +22,7 @@
 }
 
 .app__about-title {
+  margin: 20px;
   padding-left: 15px;
   font-size: 1.3em;
   font-family: var(--text-Carrete);
@@ -71,7 +73,7 @@
   color: var(--text-100);
   font-family: var(--text-Abel);
 
-  box-shadow: 0 0px 20px 5px rgba(255, 255, 255, 0.10);
+  box-shadow: 0 0px 20px 5px rgba(255, 255, 255, 0.1);
 }
 
 .app__about-left_Stylefusion span,
@@ -79,7 +81,7 @@
 .app__about-left_Sneakerfusion span,
 .app__about-right_Lifestylefusion span,
 .app__about-right_Diversityfusion span,
-.app__about-right_JoinUS span  {
+.app__about-right_JoinUS span {
   height: min-content;
   padding: 5px;
   background-color: var(--primary-100);
@@ -96,7 +98,7 @@
 .app__about-left_Stylefusion h4,
 .app__about-left_Sneakerfusion h4,
 .app__about-right_Lifestylefusion h4,
-.app__about-right_Diversityfusion  h4,
+.app__about-right_Diversityfusion h4,
 .app__about-right_JoinUS h4 {
   font-size: 1.4em;
 }
@@ -109,7 +111,7 @@
   font-size: 1.1em;
   text-align: justify;
 }
- 
+
 .app__about-center {
   grid-area: Center;
   position: relative;
@@ -178,10 +180,149 @@
 }
 
 .app__about-right {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  margin: 20px;
+}
+
+@media screen and (max-width: 1380px) {
+  .app__about-left {
+    margin-right: 80px;
+  }
+  .app__about-right {
+    margin-left: 80px;
+  }
+  .app__about-left_Stylefusion,
+  .app__about-left_Sneakerfusion,
+  .app__about-right_Lifestylefusion,
+  .app__about-right_Diversityfusion,
+  .app__about-right_JoinUS {
+    width: 100%;
+  }
+  .app__about-left_Stylefusion,
+  .app__about-left_Sneakerfusion {
+    margin-right: 80px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .app__about-left_Stylefusion p,
+  .app__about-left_Sneakerfusion p,
+  .app__about-right_Lifestylefusion p,
+  .app__about-right_Diversityfusion p,
+  .app__about-right_JoinUS p {
+    font-size: 0.9em;
+    text-align: justify;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .app__about-left {
+    margin-right: 20px;
+  }
+  .app__about-right {
+    margin-left: 20px;
+  }
+  .app__about-left_Stylefusion span,
+  .app__about-left_Stylefusion span,
+  .app__about-left_Sneakerfusion span,
+  .app__about-right_Lifestylefusion span,
+  .app__about-right_Diversityfusion span,
+  .app__about-right_JoinUS span {
+    display: none;
+  }
+  .app__about-left_Stylefusion h4,
+  .app__about-left_Sneakerfusion h4,
+  .app__about-right_Lifestylefusion h4,
+  .app__about-right_Diversityfusion h4,
+  .app__about-right_JoinUS h4 {
+    font-size: 1.2em;
+  }
+  .app__about-center_C1,
+  .app__about-center_C2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .app__about {
+    grid-template:
+      "Left"
+      "Center"
+      "Right" /
+      100%;
+  }
+  .app__about-left {
+    display: grid;
+    grid-template:
+      "Title Title"
+      "FirstCard SecondCard";
+    gap: 20px;
+
+    margin-bottom: 130px;
+  }
+  .app__about-title {
+    grid-area: Title;
+    padding: 0;
+  }
+  .app__about-left_Stylefusion,
+  .app__about-left_Sneakerfusion {
+    margin-right: 0px;
+  }
+  .app__about-center {
+    grid-area: Center;
+    position: relative;
+
     display: flex;
     flex-direction: column;
+  }
+  .app__about-center_L1,
+  .app__about-center_L2 {
+    width: 100%;
+    height: 200px;
 
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
 
-    margin: 20px;
+    overflow: hidden;
+    border-left: none;
+    border-top: 3px solid var(--accent-100);
+  }
+  .app__about-center_L2 {
+    border-right: none;
+    border-bottom: 3px solid var(--accent-100);
+  }
+  .app__about-center_L1 img,
+  .app__about-center_L2 img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .app__about-center_C1,
+  .app__about-center_C2 {
+    display: flex;
+  }
+  .app__about-center_C1 {
+    left: 10px;
+    bottom: -110px;
+  }
+  
+  .app__about-center_C2 {
+    right: 10px;
+    top: -110px;
+  }
+
+  .app__about-right {
+    margin-top: 130px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 15px;
+  }
+  .app__about-right_Lifestylefusion,
+  .app__about-right_Diversityfusion,
+  .app__about-right_JoinUS {
+    width: 250px;
+  }
 }

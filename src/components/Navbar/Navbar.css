@@ -22,6 +22,10 @@
   z-index: 10;
 }
 
+svg {
+  cursor: pointer;
+}
+
 .app__navbar-logo {
   height: 40px;
 }
@@ -69,6 +73,7 @@
 .app__navbar-menu {
   display: none;
 }
+
 .app__navbar-redirections_menu {
   display: flex;
   flex-direction: column;
@@ -78,7 +83,7 @@
 .app__navbar-redirections_menu a {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 
   color: var(--text-100);
   text-decoration: none;
@@ -113,6 +118,18 @@
   height: 40px;
 }
 
+.gpt3__navbar-menu_container {
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  background-color: var(--bg-200);
+
+  padding: 20px;
+
+  border: 1px solid var(--primary-100);
+  border-radius: 10px;
+}
+
 @keyframes hoverLinks {
   from {
     max-width: 0%;
@@ -139,5 +156,31 @@
   .app__navbar-menu {
     display: flex;
   }
-  
+}
+
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
