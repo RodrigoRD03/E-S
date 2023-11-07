@@ -26,7 +26,7 @@
 
 .app__Opinions-title h1::after {
   position: absolute;
-  content: "Opinion";
+  content: "Opinions";
   width: 100%;
   left: 0;
   bottom: 0;
@@ -45,15 +45,16 @@
 .app__Opinions-front {
   display: flex;
   gap: 20px;
-  padding-left: 100px;
 }
 
 .app__Opinions-front_img img {
-  width: 600px;
+  max-width: 600px;
+  width: auto     ;
 }
 
 .app__Opinions-text {
-  width: 550px;
+  max-width: 550px;
+
   font-family: var(--text-Abel);
   color: var(--text-100);
   text-align: justify;
@@ -123,4 +124,69 @@
   white-space: nowrap; /* Evita que el texto se desborde */
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 1270px) {
+  .app__Opinions-item {
+    width: 220px;
+  }
+  .app__Opinions-item p {
+    font-size: .9em;
+  }
+  
+}
+
+@media screen and (max-width: 1024px) {
+  .app__Opinions {
+    height: fit-content;
+  }
+  .app__Opinions-front {
+    width: 100%;
+  }
+  .app__Opinions-front_img {
+    width: 100%;
+  }
+  .app__Opinions-front_img img{
+    width: 100%;
+  }
+  .app__Opinions-front {
+    flex-direction: column-reverse;
+  }
+  .app__Opinions-text {
+    width: 45%;
+  }
+  .app__Opinions-carrousel {
+    top: 150px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .app__Opinions {
+    height: 1300px;
+  }
+  .app__Opinions-content {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .app__Opinions-text {
+    width: 100%;
+  }
+  .app__Opinions-carrousel {
+    margin: auto;
+    width: max-content;
+    position:relative;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .app__Opinions-item {
+    width: 162px;
+    height: 350px;
+  }
 }

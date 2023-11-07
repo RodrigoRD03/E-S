@@ -249,11 +249,13 @@
 
 @media screen and (max-width: 780px) {
   .app__about {
+    height: 1260px;
     grid-template:
       "Left"
       "Center"
       "Right" /
       100%;
+    margin-bottom: 80px;
   }
   .app__about-left {
     display: grid;

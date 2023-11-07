@@ -7,7 +7,7 @@ const Opinions = () => {
   return (
     <div className="app__Opinions">
       <div className="app__Opinions-title">
-        <h1>Opinion</h1>
+        <h1>Opinions</h1>
       </div>
       <div className="app__Opinions-content">
         <div className="app__Opinions-front">
